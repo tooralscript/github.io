@@ -1210,6 +1210,13 @@ color: #000000;
   }
 }
 
+@media screen and (min-width:992px) {
+  .mobile-version{
+    display: none;
+  }
+  
+}
+
 i:hover{
   cursor: pointer;
 }
