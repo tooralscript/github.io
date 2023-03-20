@@ -25,6 +25,7 @@ body{
 }
 
 .entire-page-container{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -57,7 +58,11 @@ body{
   display: flex;
   flex-direction: column;
   margin-top: 33px;
+
+  
 }
+
+
 
 
 
@@ -211,6 +216,10 @@ color: #2D2D2D;
   gap: 9px;
 }
 
+label:hover{
+  cursor: pointer;
+}
+
 .inputs-colors-container label{
   display: inline-block;
   border-radius: 50%;
@@ -234,7 +243,7 @@ color: #2D2D2D;
 }
 
 .inputs-colors-circles input:checked + label{
-  outline:1px solid #F58634;;
+  outline:1px solid #F58634;
 }
 
 .inputs-colors-container input{
@@ -245,6 +254,11 @@ color: #2D2D2D;
   margin-top: 10px;
 }
 
+.inputs-memory-container{
+
+  width: 40%;
+  /* display: flex; */
+}
 
 .reng-for-input{
   font-style: normal;
@@ -263,7 +277,12 @@ color: #2D2D2D;
   color: #000000;
 }
 
-.inputs-memory-container input:nth-of-type(1){
+.inputs-memory-container div{
+  /* border: 1px solid; */
+  display: flex;
+}
+
+/* .inputs-memory-container input:nth-of-type(1){
   width: 60px;
   height: 30px;
   left: 698px;
@@ -271,9 +290,9 @@ color: #2D2D2D;
   background: #F6F6F6;
   border: 1px solid #F58634;
   border-radius: 4px;
-}
+} */
 
-.inputs-memory-container input:nth-of-type(2){
+/* .inputs-memory-container input:nth-of-type(2){
   width: 60px;
   height: 30px;
   left: 698px;
@@ -281,6 +300,34 @@ color: #2D2D2D;
   background: #F6F6F6;
   border: 1px solid #E7E7E7;
   border-radius: 4px;
+} */
+
+.inputs-memory-container label{
+  display: inline-block;
+  border-radius: 4px;
+  width: 60px;
+  height: 30px;
+  border: 1px solid #E7E7E7;
+  margin-top: 14px;
+  margin-left: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+
+.inputs-memory-container input{
+  display: none;
+}
+
+
+.inputs-memory-container > div > input:checked + label{
+  outline: 1px solid #F58634;
 }
 
 .inputs-general-container{
@@ -813,7 +860,9 @@ color: #2D2D2D;
 }
 
 .last-line{
- filter: blur(1px);
+  background: linear-gradient(180deg, #2D2D2D -7.27%, rgba(45, 45, 45, 0) 94.55%);
+  -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .more-reviews{
@@ -1210,12 +1259,14 @@ color: #000000;
   }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:992px){
   .mobile-version{
     display: none;
   }
   
 }
+
+
 
 i:hover{
   cursor: pointer;
@@ -1855,7 +1906,7 @@ text-fill-color: transparent;
 .footer-container{
   margin-top: 70px;
   width: 100%;
-  height: 140px;
+  height: 117px;
   background: #2D2D2D;
   display: flex;
   flex-direction: column;
